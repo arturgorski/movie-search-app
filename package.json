@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "start": "webpack-dev-server --inline --progress",
+    "test": "ava --watch",
     "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail"
   },
   "dependencies": {
@@ -14,6 +15,7 @@
   "devDependencies": {
     "@types/core-js": "^0.9.34",
     "@types/node": "^6.0.46",
+    "ava": "^0.16.0",
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.7",
     "babel-preset-es2015": "^6.18.0",
@@ -25,9 +27,20 @@
     "null-loader": "^0.1.1",
     "raw-loader": "^0.5.1",
     "rimraf": "^2.5.2",
+    "sinon": "^1.17.6",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.0",
     "webpack-dev-server": "^1.14.1",
     "webpack-merge": "^0.14.0"
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
   }
 }
