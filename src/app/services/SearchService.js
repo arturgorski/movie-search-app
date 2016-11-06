@@ -16,8 +16,6 @@ class SearchService {
     search(term) {
         term = term.trim();
 
-        console.log(term);
-
         return term ? this.apiClient.search(term) : Promise.resolve({results: []});
     }
 }
