@@ -3,8 +3,9 @@
   "version": "0.0.1",
   "scripts": {
     "start": "webpack-dev-server --inline --progress",
-    "test": "ava --watch",
-    "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail"
+    "test": "ava",
+    "test:watch": "ava --watch",
+    "build": "npm test && rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail"
   },
   "dependencies": {
     "core-js": "^2.4.1",
