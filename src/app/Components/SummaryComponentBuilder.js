@@ -33,7 +33,7 @@ class SummaryComponentBuilder {
      * @returns {SummaryComponentBuilder}
      */
     addFoundRecordsInfo(totalResults) {
-        this.html += totalResults ? `<h4>Records found: ${totalResults} </h4>` : `<h4>No records found :(</h4>`;
+        this.html += totalResults ? `<h5>Records found: ${totalResults} </h5>` : `<h5>No records found :(</h5>`;
 
         return this;
     }

@@ -15,7 +15,7 @@ test('should display proper information if found some records', t => {
     let summaryHtml = builder.build({total_results: 42}).getHtml();
 
     // then
-    t.is(summaryHtml, '<h4>Records found: 42 </h4>');
+    t.is(summaryHtml, '<h5>Records found: 42 </h5>');
 });
 
 test('should display proper information if no records found', t => {
@@ -27,7 +27,7 @@ test('should display proper information if no records found', t => {
     let summaryHtml = builder.build({total_results: 0}).getHtml();
 
     // then
-    t.is(summaryHtml, '<h4>No records found :(</h4>');
+    t.is(summaryHtml, '<h5>No records found :(</h5>');
 });
 
 

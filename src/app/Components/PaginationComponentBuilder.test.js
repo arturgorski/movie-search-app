@@ -22,7 +22,7 @@ test('should create single pagination element', t => {
     let summaryHtml = builder.getPaginationEl(4, 4);
 
     // then
-    t.is(summaryHtml, '<li class="current"><a href="" data-page="4">4</a></li>');
+    t.is(summaryHtml, '<li class="current"><a href="">4</a></li>');
 });
 
 test('should create single pagination element', t => {
@@ -46,5 +46,5 @@ test('should create whole pagination element', t => {
     let summaryHtml = builder.addPagination(2, 1).getHtml();
 
     // then
-    t.is(summaryHtml, '<ul class="pagination"><li class="current"><a href="" data-page="1">1</a></li><li><a href="" data-page="2">2</a></li></ul>');
+    t.is(summaryHtml, '<ul class="pagination"><li class="current"><a href="">1</a></li><li><a href="" data-page="2">2</a></li></ul>');
 });

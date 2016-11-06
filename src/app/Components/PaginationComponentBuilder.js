@@ -69,8 +69,9 @@ class PaginationComponentBuilder {
      */
     getPaginationEl(page, currentPage) {
         let classAttr = page === currentPage ? ' class="current"' : '';
+        let dataPageAttr = page === currentPage ? '' : ` data-page="${page}"`;
 
-        return `<li${classAttr}><a href="" data-page="${page}">${page}</a></li>`
+        return `<li${classAttr}><a href=""${dataPageAttr}>${page}</a></li>`
     }
 }
 

@@ -23,13 +23,14 @@ const searchHandler = (pageNumber) => {
 };
 
 paginationContainerEl.addEventListener('click', (ev) => {
+    //if user clicks on pagination anchor element it should contain 'data-page' attribute
     let pageNumber = ev.target.getAttribute('data-page');
     ev.preventDefault();
 
     pageNumber && searchHandler(pageNumber);
 });
 
-searchButtonEl.addEventListener('click', searchHandler);
+searchButtonEl.addEventListener('click', searchHandler.bind(null, 1));
 searchFieldEl.addEventListener('keypress', function (e) {
     let key = e.which || e.keyCode;
 
