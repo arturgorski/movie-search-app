@@ -6,7 +6,10 @@
     "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail"
   },
   "dependencies": {
-    "core-js": "^2.4.1"
+    "core-js": "^2.4.1",
+    "foundation-icons": "^1.0.1",
+    "foundation-sites": "^6.2.4",
+    "jquery": "^3.1.1"
   },
   "devDependencies": {
     "@types/core-js": "^0.9.34",
