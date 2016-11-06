@@ -10,13 +10,13 @@ Enter your The Movie DB API into created `config.js` file. Created file should l
  export const THE_MOVIE_DB_API_KEY = 'put your API key here';
  ```
 2. Go to main application directory and install all npm packages with command:
-```
-npm i
-```
+ ```
+ npm i
+ ```
 3. Run application
-```
-npm start
-```
+ ```
+ npm start
+ ```
 4. Open your browser and enter address:
  ```
  http://localhost:8080/
