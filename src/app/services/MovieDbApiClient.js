@@ -16,14 +16,16 @@ class MovieDbApiClient {
      * Calls API method to search movie
      *
      * @param {string} term the search term
+     * @param {number} pageNumber page number
      * @returns {Promise}
      */
-    search(term) {
+    search(term, pageNumber) {
         return this.$.get(
             API_SEARCH_URL,
             {
                 api_key: this.apiKey,
-                query: term
+                query: term,
+                page: pageNumber
             }
         )
 

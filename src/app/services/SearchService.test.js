@@ -21,7 +21,7 @@ test('should call API client when non empty string is passed', t => {
     const searchTermTrimmed = 'search term';
     apiMock.expects('search')
         .once()
-        .withArgs(searchTermTrimmed);
+        .withArgs(searchTermTrimmed, 1);
 
     // when
     const searchService = new SearchService(apiMock.object);

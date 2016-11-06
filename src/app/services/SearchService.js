@@ -8,15 +8,16 @@ class SearchService {
     }
 
     /**
-     *  Search for movies by given term
+     * Search for movies by given term
      *
-     * @param term
-     * @returns {*}
+     * @param {string} term
+     * @param {number} pageNumber
+     * @returns {Promise}
      */
-    search(term) {
+    search(term, pageNumber = 1) {
         term = term.trim();
 
-        return term ? this.apiClient.search(term) : Promise.resolve({results: []});
+        return term ? this.apiClient.search(term, pageNumber) : Promise.resolve({results: []});
     }
 }
 

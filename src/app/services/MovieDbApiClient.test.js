@@ -25,10 +25,10 @@ test('should make API call with given term', t => {
     const searchTerm = 'movie title';
     jqueryMock.expects('get')
         .once()
-        .withArgs(API_SEARCH_URL, {api_key: API_KEY, query: searchTerm});
+        .withArgs(API_SEARCH_URL, {api_key: API_KEY, query: searchTerm, page: 2});
 
     // when
-    apiClient.search(searchTerm);
+    apiClient.search(searchTerm, 2);
 
     // then
     t.true(jqueryMock.verify());
