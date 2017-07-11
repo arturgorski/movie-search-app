@@ -1,9 +1,12 @@
-##Movies search application
-####Requirements:
+## Movies search application
+
+#### Requirements:
+
 - node.js version 6.* or Docker installed
 - The Movie DB API key (more information about API key - https://www.themoviedb.org/faq/api)
 
-####To run application
+#### To run application
+
 1. Go to `src\app` directory and create `config.js` file from `config.js.dist` template.
 Enter your The Movie DB API into created `config.js` file. Created file should look like this: 
 
@@ -30,11 +33,11 @@ If you have docker and docker-compose installed you can omit steps 2 and 3. Inst
 ```
 docker-compose up
 ```
-####To run unit tests
+#### To run unit tests
 
 Enter `npm test` from within main application directory
 
-####To build application
+#### To build application
 
 Run 
 ```
